@@ -14,6 +14,7 @@
 		6BE3B1B322F4CED800D12D19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3B1B122F4CED800D12D19 /* LaunchScreen.storyboard */; };
 		6BE3B1BE22F4CED900D12D19 /* xibInStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3B1BD22F4CED900D12D19 /* xibInStoryboardTests.swift */; };
 		6BE3B1C922F4CED900D12D19 /* xibInStoryboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE3B1C822F4CED900D12D19 /* xibInStoryboardUITests.swift */; };
+		6BE3B1D722F4CF9000D12D19 /* MyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE3B1D622F4CF9000D12D19 /* MyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6BE3B1C422F4CED900D12D19 /* xibInStoryboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xibInStoryboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE3B1C822F4CED900D12D19 /* xibInStoryboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xibInStoryboardUITests.swift; sourceTree = "<group>"; };
 		6BE3B1CA22F4CED900D12D19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE3B1D622F4CF9000D12D19 /* MyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6BE3B1A822F4CED700D12D19 /* AppDelegate.swift */,
 				6BE3B1AA22F4CED700D12D19 /* ViewController.swift */,
+				6BE3B1D622F4CF9000D12D19 /* MyView.xib */,
 				6BE3B1AC22F4CED700D12D19 /* Main.storyboard */,
 				6BE3B1AF22F4CED800D12D19 /* Assets.xcassets */,
 				6BE3B1B122F4CED800D12D19 /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE3B1D722F4CF9000D12D19 /* MyView.xib in Resources */,
 				6BE3B1B322F4CED800D12D19 /* LaunchScreen.storyboard in Resources */,
 				6BE3B1B022F4CED800D12D19 /* Assets.xcassets in Resources */,
 				6BE3B1AE22F4CED700D12D19 /* Main.storyboard in Resources */,
