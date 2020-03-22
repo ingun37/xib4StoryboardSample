@@ -25,14 +25,28 @@ class MyView: UIView {
     
     static func loadViewFromNib() -> MyView {
         let bundle = Bundle(for: self)
-        let nib = UINib(nibName: String(describing:self), bundle: bundle)
-        return nib.instantiate(withOwner: nil, options: nil).first as! MyView
+        let nib = UINib(nibName: "MyViews", bundle: bundle)
+        return nib.instantiate(withOwner: nil, options: nil).first {
+            ($0 as? UIView)?.restorationIdentifier == "1"
+        }! as! MyView
     }
 }
 
-class MyWrapperView1:UIView {
-    var contentView:MyView
+
+class MyView2: UIView {
+    @IBOutlet weak var lbl:UILabel!
     
+    static func loadViewFromNib() -> MyView2 {
+        let bundle = Bundle(for: self)
+        let nib = UINib(nibName: "MyViews", bundle: bundle)
+        return nib.instantiate(withOwner: nil, options: nil).first {
+            ($0 as? UIView)?.restorationIdentifier == "2"
+        }! as! MyView2
+    }
+}
+
+class StoryMyView1:UIView {
+    var contentView:MyView
     required init?(coder aDecoder: NSCoder) {
         contentView = MyView.loadViewFromNib()
         super.init(coder: aDecoder)
@@ -41,20 +55,12 @@ class MyWrapperView1:UIView {
     }
 }
 
-//If MyView is dynamically self-resizing view...
-class MyWrapperView2:UIView {
-    var contentView:MyView
-    
+class StoryMyView2:UIView {
+    var contentView:MyView2
     required init?(coder aDecoder: NSCoder) {
-        contentView = MyView.loadViewFromNib()
+        contentView = MyView2.loadViewFromNib()
         super.init(coder: aDecoder)
         contentView.frame = bounds
         addSubview(contentView)
-        translatesAutoresizingMaskIntoConstraints = false
-
-    contentView.layoutMarginsGuide.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor).isActive = true
-    contentView.layoutMarginsGuide.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor).isActive = true
-    contentView.layoutMarginsGuide.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
-    contentView.layoutMarginsGuide.bottomAnchor.constraint(equalTo: layoutMarginsGuide.bottomAnchor).isActive = true
     }
 }
