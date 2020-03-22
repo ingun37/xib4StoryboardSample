@@ -64,7 +64,7 @@
                 <outlet property="subView1" destination="Zpk-vv-5vc" id="Wfe-AP-iom"/>
                 <outlet property="subView2" destination="fr6-7Q-PfR" id="49T-2E-3Ta"/>
             </connections>
-            <point key="canvasLocation" x="-47" y="257"/>
+            <point key="canvasLocation" x="-47.10144927536232" y="256.47321428571428"/>
         </view>
         <view contentMode="scaleToFill" restorationIdentifier="2" id="DtZ-a3-5o1" customClass="MyView2" customModule="xibInStoryboard" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="291" height="343"/>
